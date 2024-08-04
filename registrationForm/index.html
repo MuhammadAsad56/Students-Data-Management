@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Registration Form</title>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">STUDENT DETAILS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  <a id="signupLink" class="nav-link" href="../signup/signup.html">SignUp</a>
+                  <a id="loginLink" class="nav-link" href="../loign/login.html">Login</a>
+                  <a onclick="logout()" id="logoutLink" class="nav-link" href="#">Logout</a>
+                </div>
+            </div>
+          </nav>
+  <div class="bg-gray-100 flex items-center justify-center h-screen">
+      <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Register</h2>
+        <div id="registrationForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="username">Username</label>
+            <input class="mt-1 block w-full p-2 border border-gray-300 rounded" type="text" id="username" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="email">Email</label>
+            <input class="mt-1 block w-full p-2 border border-gray-300 rounded" type="email" id="email" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" >Student picture</label>
+            <input class="mt-1 block w-full p-2 border border-gray-300 rounded" type="file" id="studentPicture" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" >Qualification</label>
+            <input class="mt-1 block w-full p-2 border border-gray-300 rounded" id="qualification" required>
+          </div>
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+              Course Category
+          </label>
+          <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="courseCategory">
+              <option selected>Web And App</option>
+              <option>Digital Marketing</option>
+              <option>Mobile Repairing</option>
+          </select>
+          </div>
+          <button onclick="stuRegistration()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" type="submit">Register</button>
+        </div>
+      </div>
+
+  </div>  
+
+    <script type="module" src="../firebase.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
